@@ -1,0 +1,9 @@
+INDEX VERSION 1.130
+D:\spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\350845412.index
+\advanced-rs\src\main\java
+D:\spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1921157212.index
+\messenger\src\main\java
+D:\spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3937221793.index
+\spring-mvc-helloworld-example\src\main\java
+D:\spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3434317768.index
+\toyrobot\src\main\java

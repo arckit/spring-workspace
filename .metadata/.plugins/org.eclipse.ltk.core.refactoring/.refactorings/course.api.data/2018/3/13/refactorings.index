@@ -1,0 +1,11 @@
+1522034936144	Delete elements
+1522035260676	Rename package 'org.arc.beans'
+1522035273539	Rename package 'org.arc.controllers'
+1522035284187	Rename package 'org.arc.services'
+1522038609899	Delete element
+1522038612305	Delete element
+1522038695561	Copy package
+1522038719007	Rename type 'Topic'
+1522038731278	Rename type 'TopicController'
+1522038740774	Rename type 'TopicRepository'
+1522038751690	Rename type 'TopicService'

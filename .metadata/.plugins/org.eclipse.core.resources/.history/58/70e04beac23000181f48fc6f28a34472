@@ -1,0 +1,39 @@
+import java.util.Map;
+
+import javax.security.auth.login.Configuration;
+
+public class FreeMarkerTemplate {
+
+	 public void execute() {
+	        Configuration configuration = prepareConfiguration();
+	        // Load templates from resources/templatess.
+	        configuration.setClassForTemplateLoading(FreeMarkerTemplate.class, "/templates");
+
+	        try {
+	            Template template = configuration.getTemplate("commonTemplate.ftl");
+
+	            // Console output
+	            Writer out = new OutputStreamWriter(System.out);
+	            template.process(prepareData(), out);
+	            out.flush();
+
+	        } catch (IOException | TemplateException e) {
+	            throw new RuntimeException(e);
+	        }
+	    }
+	 
+	 private Configuration prepareConfiguration() {
+	        Configuration configuration = new Configuration(Configuration.VERSION_2_3_23);
+	        configuration.setDefaultEncoding("UTF-8");
+	        configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
+	        configuration.setLogTemplateExceptions(false);
+	        return configuration;
+	    }
+
+	    private Map<String, Object> prepareData() {
+	        Model model = service.getModel();
+	        Map<String, Object> data = new HashMap<String, Object>();
+	        data.put("userDetails", model.getUserDetails());
+	        return data;
+	    }
+}
