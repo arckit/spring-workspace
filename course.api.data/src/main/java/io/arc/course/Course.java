@@ -2,6 +2,9 @@ package io.arc.course;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import io.arc.topic.Topic;
 
 
 @Entity
@@ -10,6 +13,10 @@ public class Course {
 private String id;
 private String name;
 private String description;
+
+
+@ManyToOne
+private Topic topic;
 
 
 public Course() {
@@ -42,6 +49,13 @@ public String getDescription() {
 
 public void setDescription(String description) {
 	this.description = description;
+}
+
+public Topic getTopic() {
+	return topic;
+}
+public void setTopic(Topic topic) {
+	this.topic = topic;
 }
 
 }

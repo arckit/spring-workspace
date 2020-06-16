@@ -1,9 +1,0 @@
-package org.arc.services;
-
-import org.springframework.data.repository.CrudRepository;
-
-import io.arc.beans.Topic;
-
-public interface TopicRepository extends CrudRepository<Topic,String>{
-
-}

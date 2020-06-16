@@ -13,23 +13,27 @@ private List<Course> list = new ArrayList<Course>();
 @Autowired
 private CouseRepository repo;
 	
-public List<Course> getAllTopics(){
+public List<Course> getAllCourse(String topicId){
 	List<Course> list = new ArrayList<Course>();
-	for (Course t:repo.findAll()) {
+	for (Course t:repo.findByTopicId(topicId)) {
 		list.add(t);
 	}
 	return list;
 }
-public void addTopic(Course t){
+public void addCourse(Course t){
 	repo.save(t);
 }
-public void deleteTopic(Course t){
+public void deleteCourse(Course t){
 	repo.delete(t);
 }
-public Course getTopic(String t){
+public Course getCourse(String t){
 
 	return repo.findById(t).get();
 	
+}
+public Course getTopic(String id) {
+	// TODO Auto-generated method stub
+	return null;
 }
 
 }

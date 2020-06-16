@@ -16,13 +16,13 @@ public class CourseController {
 	/*@RequestMapping("/course")
 	public List<Course> getAllcourse() {
 		return service.getAllCourse();
-	}
+	}*/
 	
 	@RequestMapping(method=RequestMethod.GET, value="/course/{id}")
 	public Course getTopic(@PathVariable String id) {
 		 return service.getTopic(id);
 	}
-	
+	/*
 	@RequestMapping(method=RequestMethod.POST, value="/course")
 	public void putTopic(@RequestBody Course t) {
 		 service.addTopic(t);
